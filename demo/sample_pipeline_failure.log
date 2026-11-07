@@ -1,0 +1,5 @@
+2026-11-08T01:45:10Z [ERROR] terraform apply failed:
+Error: acquiring state lock: blob is already leased.
+State lock ID: f82b-4491-a128-4492a83e
+Error acquiring the state lock on storage account sttfstateprod01.
+Another process may be running or previous run crashed.

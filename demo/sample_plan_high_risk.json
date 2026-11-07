@@ -1,0 +1,28 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.9.5",
+  "resource_changes": [
+    {
+      "address": "azurerm_network_security_rule.open_ssh",
+      "type": "azurerm_network_security_rule",
+      "name": "open_ssh",
+      "change": {
+        "actions": ["create"],
+        "after": {
+          "source_address_prefix": "0.0.0.0/0",
+          "destination_port_range": "22",
+          "access": "Allow",
+          "direction": "Inbound"
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_account.customer_data",
+      "type": "azurerm_storage_account",
+      "name": "customer_data",
+      "change": {
+        "actions": ["delete"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+name: 'Agentic AI Terraform Reviewer'
+description: 'Autonomous LLM Agent for reviewing Terraform plan blast radius, diagnosing CI/CD errors, and enforcing human approval'
+author: 'Gunjan Kumar Gaurav'
+branding:
+  icon: 'cpu'
+  color: 'purple'
+inputs:
+  plan-json:
+    description: 'Path to Terraform plan in JSON format'
+    required: false
+    default: 'tfplan.json'
+  failure-log:
+    description: 'Path to CI/CD failure log for troubleshooting'
+    required: false
+  github-token:
+    description: 'GitHub token for PR commenting and human approval gate'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
